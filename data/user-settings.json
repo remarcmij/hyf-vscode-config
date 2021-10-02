@@ -1,0 +1,34 @@
+{
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [80, 130, 140],
+  "editor.tabSize": 2,
+  "files.autoSave": "onFocusChange",
+  "git.autofetch": true,
+  "prettier.trailingComma": "es5",
+  "prettier.singleQuote": true,
+  "javascript.inlayHints.parameterNames.enabled": "none",
+  "typescript.inlayHints.parameterNames.enabled": "none",
+  "settings.cycle": [
+    {
+      "id": "parameterNamesInlay",
+      "overrideWorkspaceSettings": false,
+      "values": [
+        {
+          "javascript.inlayHints.parameterNames.enabled": "all",
+          "typescript.inlayHints.parameterNames.enabled": "all"
+        },
+        {
+          "javascript.inlayHints.parameterNames.enabled": "none",
+          "typescript.inlayHints.parameterNames.enabled": "none"
+        }
+      ]
+    }
+  ]
+}
