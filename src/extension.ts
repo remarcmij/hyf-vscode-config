@@ -32,24 +32,29 @@ async function applySettings() {
     const promises = Object.entries(targetSettings).map(([section, value]) => {
       return config.update(section, value, vscode.ConfigurationTarget.Global);
     });
+
     const results = await Promise.allSettled(promises);
+
+    let allOkay = true;
     results.forEach((result) => {
       if (result.status === 'rejected') {
         vscode.window.showErrorMessage(result.reason.message);
+        allOkay = false;
       }
     });
-    if (results.some((result) => result.status === 'rejected')) {
-      vscode.window.showWarningMessage(
-        'Some recommended VSCode settings could not be applied successfully.'
-      );
-    } else {
+
+    if (allOkay) {
       vscode.window.showInformationMessage(
         'All recommended VSCode settings have been applied successfully.'
       );
+    } else {
+      vscode.window.showWarningMessage(
+        'Some recommended VSCode settings could not be applied successfully.'
+      );
     }
-  } catch {
+  } catch (error: any) {
     vscode.window.showErrorMessage(
-      'An error occurred while attempting to apply the recommended VSCode settings.'
+      `An error occurred while attempting to apply the recommended VSCode settings: ${error.message}`
     );
   }
 }
