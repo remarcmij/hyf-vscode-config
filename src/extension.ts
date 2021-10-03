@@ -11,7 +11,24 @@ async function applySettings() {
       'utf8'
     );
     const targetSettings = JSON.parse(json);
+
     const config = vscode.workspace.getConfiguration();
+
+    // Check for a JavaScript language specific formatter setting
+    const javaScriptLanguageSection = config.get('[javascript]') as
+      | Record<string, unknown>
+      | undefined;
+
+    if (javaScriptLanguageSection) {
+      if ('editor.defaultFormatter' in javaScriptLanguageSection) {
+        // Remove JavaScript specific formatter setting and revert to the global
+        // default of Prettier
+        targetSettings['[javascript]'] = {
+          'editor.defaultFormatter': undefined,
+        };
+      }
+    }
+
     const promises = Object.entries(targetSettings).map(([section, value]) => {
       return config.update(section, value, vscode.ConfigurationTarget.Global);
     });
