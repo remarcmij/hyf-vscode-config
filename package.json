@@ -2,8 +2,9 @@
   "name": "hyf-vscode-config",
   "displayName": "HackYourFuture VSCode Config Helper",
   "description": "Helps to configure VSCode for the HackYourFuture curriculum",
-  "version": "0.0.1",
-  "publisher": "hackyourfuture",
+  "icon": "images/hyf.jpg",
+  "version": "0.0.2",
+  "publisher": "remarcmij",
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -14,14 +15,32 @@
     "onCommand:hyf-vscode-config.applySettings"
   ],
   "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remarcmij/hyf-vscode-config.git"
+  },
   "contributes": {
     "commands": [
       {
         "command": "hyf-vscode-config.applySettings",
         "title": "HackYourFuture: Apply recommended VSCode Settings"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "settings.cycle.parameterNamesInlay",
+        "key": "ctrl+shift+i"
+      }
     ]
   },
+  "extensionPack": [
+    "aaron-bond.better-comments",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "hoovercj.vscode-settings-cycler",
+    "ritwickdey.LiveServer",
+    "streetsidesoftware.code-spell-checker"
+  ],
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",

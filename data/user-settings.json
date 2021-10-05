@@ -11,5 +11,23 @@
   "editor.tabSize": 2,
   "files.autoSave": "onFocusChange",
   "git.autofetch": true,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "javascript.inlayHints.parameterNames.enabled": "none",
+  "typescript.inlayHints.parameterNames.enabled": "none",
+  "settings.cycle": [
+    {
+      "id": "parameterNamesInlay",
+      "overrideWorkspaceSettings": false,
+      "values": [
+        {
+          "javascript.inlayHints.parameterNames.enabled": "all",
+          "typescript.inlayHints.parameterNames.enabled": "all"
+        },
+        {
+          "javascript.inlayHints.parameterNames.enabled": "none",
+          "typescript.inlayHints.parameterNames.enabled": "none"
+        }
+      ]
+    }
+  ]
 }
