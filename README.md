@@ -12,6 +12,7 @@ The extensions bundled with this VSCode extension are:
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-settings-cycler)
+- [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Settings Cycler\*](https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-settings-cycler)
 
