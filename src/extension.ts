@@ -19,14 +19,12 @@ async function applySettings() {
       | Record<string, unknown>
       | undefined;
 
-    if (javaScriptLanguageSection) {
-      if ('editor.defaultFormatter' in javaScriptLanguageSection) {
-        // Remove JavaScript specific formatter setting and revert to the global
-        // default of Prettier
-        targetSettings['[javascript]'] = {
-          'editor.defaultFormatter': undefined,
-        };
-      }
+    if (javaScriptLanguageSection?.['editor.defaultFormatter']) {
+      // Remove JavaScript specific formatter setting and revert to the global
+      // default of Prettier
+      targetSettings['[javascript]'] = {
+        'editor.defaultFormatter': undefined,
+      };
     }
 
     const promises = Object.entries(targetSettings).map(([section, value]) => {
