@@ -12,6 +12,7 @@
   "files.autoSave": "onFocusChange",
   "git.autofetch": true,
   "prettier.singleQuote": true,
+  "workbench.editor.wrapTabs": true,
   "javascript.inlayHints.parameterNames.enabled": "none",
   "typescript.inlayHints.parameterNames.enabled": "none",
   "settings.cycle": [
