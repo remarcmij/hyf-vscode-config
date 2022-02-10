@@ -1,9 +1,15 @@
 {
   "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.guides.bracketPairsHorizontal": "active",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.detectIndentation": false,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
@@ -12,23 +18,5 @@
   "files.autoSave": "onFocusChange",
   "git.autofetch": true,
   "prettier.singleQuote": true,
-  "workbench.editor.wrapTabs": true,
-  "javascript.inlayHints.parameterNames.enabled": "none",
-  "typescript.inlayHints.parameterNames.enabled": "none",
-  "settings.cycle": [
-    {
-      "id": "parameterNamesInlay",
-      "overrideWorkspaceSettings": false,
-      "values": [
-        {
-          "javascript.inlayHints.parameterNames.enabled": "all",
-          "typescript.inlayHints.parameterNames.enabled": "all"
-        },
-        {
-          "javascript.inlayHints.parameterNames.enabled": "none",
-          "typescript.inlayHints.parameterNames.enabled": "none"
-        }
-      ]
-    }
-  ]
+  "workbench.editor.wrapTabs": true
 }

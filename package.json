@@ -3,7 +3,7 @@
   "displayName": "HackYourFuture VSCode Config Helper",
   "description": "Helps to configure VSCode for the HackYourFuture curriculum",
   "icon": "images/hyf.jpg",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "remarcmij",
   "engines": {
     "vscode": "^1.60.0"
@@ -37,7 +37,6 @@
     "aaron-bond.better-comments",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "hoovercj.vscode-settings-cycler",
     "ms-vsliveshare.vsliveshare",
     "ritwickdey.LiveServer",
     "streetsidesoftware.code-spell-checker"
